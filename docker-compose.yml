@@ -1,0 +1,49 @@
+﻿services:
+  breastcancerapi:
+    build:
+      context: ./dotnet-api
+      dockerfile: BreastCancerAPI/Dockerfile
+    container_name: aspnetapi
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:80
+      ConnectionStrings__PostgresConnection: Host=postgres;Database=AppDbContext;Username=postgres;Password=1234breastcancer
+    ports:
+      - "8082:80"
+    depends_on:
+      - postgres
+    command: >
+      sh -c "sleep 20 && dotnet ef database update && dotnet BreastCancerAPI.dll"
+    networks:
+      - breastcancerapp-network
+  postgres:
+    image: postgres:14
+    restart: always
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234breastcancer
+      POSTGRES_DB: AppDbContext
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - breastcancerapp-network
+  mlflaskapi:
+    build:
+      context: ./ml-flask-api
+      dockerfile: Dockerfile
+    container_name: flaskapi
+    ports:
+      - "5001:5000"
+    depends_on:
+      - postgres
+    networks:
+      - breastcancerapp-network
+
+networks:
+  breastcancerapp-network:
+    
+volumes:
+  postgres_data:

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "xZYepBsLdO1/Im4oDob2ZwmcfyegA1SVpqvzYauM6mg=",
+  "Source": "BreastCancerAPI",
+  "BasePath": "_content/BreastCancerAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
