@@ -68,8 +68,8 @@
 ### Clone the repository:
 
 ```bash
-git clone https://github.com/username/project.git  
-cd project  
+git clone https://github.com/ykdid/BreastCancerPredictor.git  
+cd BreastCancerPredictor
 ```
 
 ### Start with Docker:
