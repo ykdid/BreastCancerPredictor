@@ -100,7 +100,7 @@ pnpm run dev
 ![Make Predict Page](./react-ts-vite/src/assets/makepredictpage.png)
 
 ### Previous Predicts Page   
-![Previous Predicts Page](./react-ts-vite/src/assets/previouspredicts.png)
+![Previous Predicts Page](./react-ts-vite/src/assets/previouspredictspage.png)
 
 ### Profile Page   
 ![Profile Page](./react-ts-vite/src/assets/profilepage.png)
