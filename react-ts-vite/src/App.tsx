@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import { ReactNode } from 'react'; // ReactNode'u import ettik
+import { ReactNode } from 'react'; 
 import HomePage from './pages/Homepage';
 import MakePredictionPage from './pages/MakePredictpage';
 import PreviousPredictsPage from './pages/PreviousPredictspage';
@@ -10,9 +10,8 @@ import { ToastContainer} from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import LearnMorePage from './pages/LearnMorepage'
 
-// LayoutProps arayüzünü tanımladık
 interface LayoutProps {
-  children: ReactNode; // Çocuk bileşenler için ReactNode türünü belirttik
+  children: ReactNode; 
 }
 
 function App() {

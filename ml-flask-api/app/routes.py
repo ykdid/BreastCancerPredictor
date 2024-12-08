@@ -14,7 +14,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 @main.route('/predict', methods=['POST'])
 def predict_route():
     try:
-        # JSON verisini al
         data = request.json
 
         if 'features' not in data:
