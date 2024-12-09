@@ -12,7 +12,7 @@
 - **Goal**: To predict whether breast cancer tumors are benign or malignant.
 - **Machine Learning**:  
   - **Dataset**: Sklearn Breast Cancer Dataset.  
-  - **Model**: SVC (Support Vector Classifier) with an RBF kernel.  
+  - **Model**: SVC (Support Vector Classifier) with an linear kernel.  
 - **Technologies Used**:  
   - **Backend**: Flask API and ASP.NET Core API.  
   - **Frontend**: React (TypeScript) + TailwindCSS.  
